@@ -1,0 +1,375 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background: #080808;
+    color: #fff;
+  }
+  
+  #header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/wow.png);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .container {
+    padding: 10px 10%;
+  }
+  
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+  }
+  
+  nav ul li a::after {
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+  }
+  
+  nav ul li a:hover::after {
+    width: 100%;
+  }
+  
+  .header-text {
+    margin-top: 20%;
+    font-size: 30px;
+  }
+  
+  .header-text h1 {
+    font-size: 60px;
+    margin-top: 20px;
+  }
+  
+  .about {
+    padding: 80px 0;
+    color: #ababab;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .col1 {
+    flex-basis: 35%;
+  }
+  
+  .col1 img {
+    width: 450px;
+    height: 650px;
+    border-radius: 15px;
+  }
+  
+  .col2 {
+    flex-basis: 60%;
+  }
+  
+  .sub {
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+  }
+  
+  .tabs {
+    display: flex;
+    margin: 20px 0 40px;
+  }
+  
+  .tlinks {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .tlinks::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+  }
+  
+  .tlinks.a1::after {
+    width: 50%;
+  }
+  
+  .tabcontent ul li {
+    list-style: none;
+    margin: 10px 0;
+  }
+  
+  .tabcontent ul li span {
+    color: #ababab;
+    font: 14px;
+  }
+  
+  .tabcontent {
+    display: none;
+  }
+  
+  .tabcontent.a {
+    display: block;
+  }
+  
+  #services {
+    padding: 30px 0;
+  }
+  
+  .serviceslist {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+  }
+  
+  .serviceslist div {
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+  }
+  
+  .serviceslist div i {
+    font-size: 50px;
+    margin-bottom: 30px;
+  }
+  
+  .serviceslist div h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+  
+  .serviceslist div a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+  }
+  
+  .serviceslist div:hover {
+    background: #ababab;
+    transform: translateY(-10px);
+  }
+  
+  #portfolio {
+    padding: 50px 0;
+  }
+  
+  .worklist {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+  }
+  
+  .work {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .work img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+  }
+  
+  .layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #ababab);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    transition: height 0.5s;
+  }
+  
+  .work:hover img {
+    transform: scale(1.1);
+  }
+  
+  .work:hover .layer {
+    height: 100%;
+  }
+  
+  .work h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  
+  .work p {
+    margin-bottom: 15px;
+  }
+  
+  .work a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .btn {
+    padding: 12px 30px;
+    background: #262626;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 30px;
+    display: inline-block;
+    margin-top: 30px;
+    transition: background 0.5s;
+  }
+  
+  .btn:hover {
+    background: #ababab;
+  }
+  
+  #contact {
+    padding: 80px 0;
+    background: #222222;
+  }
+  
+  .contactleft {
+    flex-basis: 35%;
+  }
+  
+  .contactleft p {
+    color: #ababab;
+    margin-bottom: 15px;
+  }
+  
+  .social a {
+    color: #fff;
+    margin-right: 10px;
+    text-decoration: none;
+  }
+  
+  .contactright form input,
+  .contactright form textarea {
+    width: 100%;
+    background: #222222;
+    border: none;
+    border-bottom: 1px solid #ababab;
+    color: #fff;
+    padding: 8px 0;
+    margin-bottom: 15px;
+    outline: none;
+  }
+  
+  .contactright form textarea {
+    resize: none;
+    height: 120px;
+  }
+  
+  .contactright form button {
+    padding: 12px 30px;
+    background: #262626;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 30px;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background 0.5s;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .contactright form button:hover {
+    background: #ababab;
+  }
+  
+  .copy {
+    text-align: center;
+    padding: 20px 0;
+    background: #000;
+    color: #ababab;
+  }
+  
+  .copy i {
+    color: #e74c3c;
+    margin: 0 5px;
+  }
+  
+  @media (max-width: 768px) {
+    .col1,
+    .col2 {
+      flex-basis: 100%;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .container {
+      padding: 10px;
+    }
+  
+    nav ul li {
+      margin: 10px 10px;
+    }
+  
+    .header-text p {
+      font-size: 20px;
+    }
+  
+    .header-text h1 {
+      font-size: 40px;
+    }
+  }
+  
