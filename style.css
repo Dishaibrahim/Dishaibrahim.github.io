@@ -212,86 +212,6 @@ nav ul li a:hover::after{
 }
 
 
-
-
-#portfolio{
-    padding:50px 0;
-    text-decoration: Courier;
-    
-
-}
-.worklist{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 40px;
-    margin-top: 40px;
-    
-
-}
-.work{
-    border-radius: 10px;
-    position: relative;
-    overflow: hidden;
-    width: 400px;
-    height: 400px;
-
-
-}
-.work img{
-    width: 100%;
-    
-    border-radius: 10px;
-    display: block;
-    transition: transform 0.5s;
-}
-.layer{
-    width: 100%;
-    height: 0;
-    background: linear-gradient(rgba(0,0,0,0.6),rgb(26, 26, 163));
-    border-radius: 10px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 40px;
-    
-
-    text-align: center;
-    font-size: 14px;
-    transition: height 0.5s;
-
-}
-.layer h3{
-    font-weight: 500;
-    margin-bottom: 20px;
-    
-
-}
-.layer a{
-    margin-top: 20px;
-    color: #262626;
-    text-decoration: navajowhite;
-    font-size: 18px;
-    line-height: 60px;
-    background: #fff;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    text-align: relative;
-
-}
-.work:hover img{
-    transform: scale(1.1);
-
-
-}
-.work:hover .layer{
-    height: 100%;
-}
 .btn{
     display: block;
     margin: 50px auto;
@@ -581,5 +501,258 @@ nav.fas{
   #box5 {
     background-color: #111115;
   }
-  
- 
+ /* General Styling */
+#resume {
+    padding: 50px 0;
+    text-align: left;
+    animation: fadeIn 1s ease-out;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: lightskyblue;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.5s;
+}
+
+h3, .leadership-list li {
+    font-size: 22px;
+    color: lightskyblue;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: slideIn 1s forwards;
+    animation-delay: 1s;
+}
+
+h3 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #ff0;
+}
+
+.experience {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: #1a1a2e;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.experience:hover {
+    transform: translateY(-10px);
+    background-color: #26263a;
+}
+
+.job-title {
+    font-size: 24px;
+    color: #ff0;
+    font-weight: 500;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.job-title:hover {
+    color: #999bd3;
+}
+
+.experience-list {
+    list-style: none;
+    padding-left: 20px;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-top: 10px;
+}
+
+.experience-list li {
+    margin: 10px 0;
+    padding: 5px;
+    color: #ccc;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.experience-list li:hover {
+    color: #fff;
+    transform: translateX(5px);
+}
+
+.leadership-list {
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 20px;
+    color: #fff;
+}
+
+.leadership-list li {
+    font-size: 18px;
+    margin: 10px 0;
+    transition: color 0.3s ease;
+}
+
+.leadership-list li:hover {
+    color: #ff6f61;
+}
+
+.role-title {
+    font-weight: bold;
+    color: rgb(242, 242, 152);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Add Fun Hover Effects for Interactivity */
+.experience-list li {
+    font-size: 16px;
+    color: #ddd;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.experience-list li:hover {
+    color: #fff;
+    transform: scale(1.05);
+}
+
+@media only screen and (max-width: 768px) {
+    #resume {
+        padding: 30px 10px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    .experience-list li, .leadership-list li {
+        font-size: 16px;
+    }
+}
+
+
+/* Styling the container for the portfolio section */
+#lol {
+    padding: 50px 0;
+    background-color: #1a1a2e;
+}
+
+.sub {
+    font-size: 36px;
+    color: #ff0;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+
+/* Grid layout for project cards */
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 30px;
+    margin-top: 40px;
+}
+
+/* Project Card Styles */
+.project-card {
+    background-color: #24263c;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    position: relative;
+    text-align: center;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    background-color: #2b2d44;
+}
+
+/* Thumbnail Image with Play Button */
+.project-thumbnail {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.project-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Play button is now a link */
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: #ff0;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    pointer-events: all; /* Ensure it can be clicked */
+}
+
+.project-card:hover .play-button {
+    opacity: 1;
+}
+
+/* Project Info */
+.project-info {
+    padding: 20px;
+    color: #fff;
+}
+
+.project-info h3 {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: #ff0;
+}
+
+.project-info p {
+    font-size: 16px;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    .sub {
+        font-size: 28px;
+    }
+
+    .project-info h3 {
+        font-size: 20px;
+    }
+
+    .project-info p {
+        font-size: 14px;
+    }
+}
