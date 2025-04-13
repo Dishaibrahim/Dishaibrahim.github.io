@@ -573,4 +573,18 @@
     }
   }
   
+  .site-alert {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #ffc107;
+    color: #000;
+    text-align: center;
+    padding: 8px 0;
+    font-size: 14px;
+    z-index: 9999;
+    font-weight: 500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
   
