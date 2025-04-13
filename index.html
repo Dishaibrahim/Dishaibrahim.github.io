@@ -1,349 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio Website</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/17524e75bc.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal Portfolio Website</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://kit.fontawesome.com/17524e75bc.js" crossorigin="anonymous"></script>
+  <style>
+    /* Background game canvas */
+    #game-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      overflow: hidden;
+    }
+    #game-canvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  </style>
 </head>
 <body>
-    <div id="header">
-        <div class="container">
-            <nav>
-              <img src="images/user.jpg" class="logo">
-              <ul id="sidemenu">
-                <li>
-                    <a href="#header">Home</a>
-                    
-                </li>
-                <li>
-                    <a href="#about">Me</a>
-                    
-                </li>
-                <li>
-                    <a href="#resume">Experience</a>
-                    
-                </li>
-                <li>
-                    <a href="#lol">My creations</a>
-                    
-                </li>
-                <li>
-                    <a href="#sub">My Achievements</a>
-                    
-                </li>
-               
-                <li>
-                    <a href="#contact">Contact</a>
-                    
-                </li>
-                
-              </ul>
-              
-            </nav>
 
-
-
-
-            <div class="header-text">
-                <p>HERE FOR THE FUN</p>
-                <h1>Hi, I'm <span>Disha</span> Ibrahim </h1>
-            </div>
-        </div>
+  <!-- LANDING PAGE / HEADER -->
+  <div id="header">
+    <!-- Dino Game Canvas: only visible in landing -->
+    <div id="game-container">
+      <canvas id="game-canvas"></canvas>
     </div>
 
+    <div class="container">
+      <nav>
+        <ul id="sidemenu">
+          <li><a href="#header">Home</a></li>
+          <li><a href="#about">Me</a></li>
+          <li><a href="#resume">Experience</a></li>
+          <li><a href="#lol">My creations</a></li>
+          <li><a href="#ach">My Achievements</a></li>
+          <li><a href="#b">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-text">
+        <p>HERE FOR THE FUN</p>
+        <h1>Hi, I'm <span>Disha</span> Ibrahim</h1>
+      </div>
+    </div>
+  </div>
+
+
+    
+      <!-- Foreground Container for About Me -->
+         
+<div class="fun-skills-container", id="about">
+        <div class="about-box">
+          <h1>👋 Hello World!</h1>
+          <p>
+            I'm a curious tech newbie, still unsure if my code is a magical spell or a monster summoning.  
+            Either way, I'm loving the journey — diving into APIs, dancing with data, and debugging like it’s a treasure hunt.  
+            🦖 Meanwhile, enjoy the dino running through my background... probably escaping from my bugs.
+          </p>
+        </div>
+      </div>
 
 <!------about------>
     
-        <div class="container">
-            <div id="about"></div>
-            <div class="row">
-                
-                <div class="col1">
-                    <img src="images/user.jpg" >
-                </div>
-                <div class="col2">
-                  <h1 class="sub">About me</h1>
-                  <p>
-                   <br>
-                   I’m a tech newbie, still figuring out if my code is a ‘blue screen of death’ or an ‘ocean of possibilities.’ Either way, I’m floating in the tech sea with a smile, eager to learn new strokes, meet new creatures, and feed on code. I’m excited for great opportunities to come my way, to hone my skills, and add value to both the world and my life!
+<div class="fun-skills-container">
+    <h1 class="skills-title">⚡ My Super Skills ⚡</h1>
+    <p class="skills-intro">Here’s my current tech arsenal – still growing, still glowing 🚀</p>
 
-                  <div class="tabs">
-                    <p class="tlinks a1" onclick="opentab('skills')">Skills</p>
-                    <p class="tlinks " onclick="opentab('some')">Education</p>
-                    <p class="tlinks " onclick="opentab('ed')">Extra-curricular Activities</p>
-                  </div>
-                  <div class="tabcontent a" id="skills">
-                    <ul>
-                        <ul>
-                            <li><span>Programming & Frameworks:</span> Python, FastAPI, Restful APIs</li>
-                            <li><span>Database Technologies:</span> SQL (PostgreSQL, MSSQL), Qdrant</li>
-                            <li><span>Machine Learning & NLP:</span> sklearn, RAG, LangChain, LLM, Natural Language Processing</li>
-                            <li><span>Tools & Version Control:</span> Git, Jira</li>
-                            <li><span>Deep Learning & AI:</span> Machine Learning, Scikit, TensorFlow</li>
-                            <li><span>Operating Systems:</span> Linux</li>
-                        </ul>
-    
-                    </ul>
-                  </div>
-                  <div class="tabcontent" id="some">
-                    <ul>
-                        <li><span>COLLEGE</span><br>NITTE Meenakshi Institute of Technology
-                            CGPA-8.43
-                            </li>
-                        <li><span>12TH BOARDS</span><br>Boscoss Pre -University College .94.5%(PCMB)
-                        </li>
-                        <li><span>10TH BOARDS</span><br>Manipal school .
-                            93.6%
-                            </li>
-                    </ul>
-                  </div>
-                  <div class="tabcontent" id="ed">
-                    <ul>
-                        <ul>
-                            <li><span>PR Lead</span> at ML Club, NMIT</li>
-                            <li><span>General Secretary</span> of Cloudzilla, NMIT</li>
-                            <li><span>Head of EMCEE Committee</span>, NMIT</li>
-                            <li>Part of <span>E-cell ENIGMA, NMIT</span></li>
-                            <li>Intern at <span>CTY Infosys, 2018</span></li>
-                        </ul>
-                        
-                        
-                    </ul>
-                  </div>
-            </div>
+    <div class="skills-grid">
+        <div class="skill-card">
+            🐍 <h3>Programming & Frameworks</h3>
+            <p>Python, FastAPI, RESTful APIs</p>
+        </div>
+        <div class="skill-card">
+            🛢️ <h3>Databases</h3>
+            <p>PostgreSQL, MSSQL, Qdrant</p>
+        </div>
+        <div class="skill-card">
+            🤖 <h3>ML & NLP</h3>
+            <p>scikit-learn, LangChain, RAG, LLM</p>
+        </div>
+        <div class="skill-card">
+            🛠️ <h3>Tools</h3>
+            <p>Git, Jira</p>
+        </div>
+        <div class="skill-card">
+            🧠 <h3>Deep Learning</h3>
+            <p>TensorFlow, Machine Learning</p>
+        </div>
+        <div class="skill-card">
+            🐧 <h3>Operating Systems</h3>
+            <p>Linux</p>
         </div>
     </div>
+</div>
+
 <!-- ---portfolio---- -->
-<div class="container">
-    <div id="lol">
-        <h1 class="sub">My Projects</h1>
-        <div class="project-list">
-            <!-- Project Card 1 -->
-            <div class="project-card">
-                <div class="project-thumbnail">
-                    <img src="images/a.jpg" alt="Portfolio Website">
-                    <a href="https://link-to-your-project1.com" class="play-button">
-                        <i class="fa-solid fa-play"></i>
-                    </a>
-                </div>
-                <div class="project-info">
-                    <h3>Portfolio Website</h3>
-                    <p>This portfolio website was designed to provide a comprehensive overview of my professional profile and serve as a representation of my abilities. It was fun incorporating HTML, CSS, and JavaScript to end up with a satisfying website for personal use.</p>
-                </div>
-            </div>
-
-            <!-- Project Card 2 -->
-            <div class="project-card">
-                <div class="project-thumbnail">
-                    <img src="images/b.jpg" alt="Railway Reservation Management System">
-                    <a href="https://github.com/Dishaibrahim/railway-reservation.git" class="play-button">
-                        <i class="fa-solid fa-play"></i>
-                    </a>
-                </div>
-                <div class="project-info">
-                    <h3>Railway Reservation Management System</h3>
-                    <p>Created a user-friendly Railway Reservation Management System using Java for the frontend and MySQL for the backend. This system simplifies the ticket reservation process, enhancing the overall efficiency of railway operations.</p>
-                </div>
-            </div>
-
-            <!-- Project Card 3 -->
-            <div class="project-card">
-                <div class="project-thumbnail">
-                    <img src="images/c.jpg" alt="Rainfall Prediction Application">
-                    <a href="https://github.com/Dishaibrahim/Cloud-classification-.git" class="play-button">
-                        <i class="fa-solid fa-play"></i>
-                    </a>
-                </div>
-                <div class="project-info">
-                    <h3>Rainfall Prediction Application</h3>
-                    <p>Developed a CNN model utilizing a cloud classification dataset from Kaggle. Implemented Flask, JavaScript, CSS, and HTML to deploy the application, aiding in accurate rainfall prediction and better preparedness for weather-related events.</p>
-                </div>
-            </div>
-
-            <!-- Project Card 4 -->
-            <div class="project-card">
-                <div class="project-thumbnail">
-                    <img src="images/e.jpg" alt="Digitization of Handwritten Prescription">
-                    <a href="https://github.com/Dishaibrahim/Digitise-handwritten-prescription.git" class="play-button">
-                        <i class="fa-solid fa-play"></i>
-                    </a>
-                </div>
-                <div class="project-info">
-                    <h3>Digitization of Handwritten Prescription</h3>
-                    <p>Utilized Deep Neural Networks to digitize handwritten prescriptions. Employing Flask, the application integrates prescription data with healthcare systems, ensuring efficient, error-free information transfer, and improving patient care.</p>
-                </div>
-            </div>
-
-            <!-- Project Card 5 -->
-            <div class="project-card">
-                <div class="project-thumbnail">
-                    <img src="images/d.jpg" alt="Smart Dustbin Using Arduino">
-                    <a href="https://link-to-your-project5.com" class="play-button">
-                        <i class="fa-solid fa-play"></i>
-                    </a>
-                </div>
-                <div class="project-info">
-                    <h3>Smart Dustbin Using Arduino Uno Microcontroller</h3>
-                    <p>Designed a smart dustbin utilizing Arduino Uno, ultrasonic sensors, and a servo motor. This technology detects motion and automatically opens the lid, enabling convenient litter disposal and promoting sustainability.</p>
-                </div>
-            </div>
-
-            <!-- Project Card 6 -->
-            <div class="project-card">
-                <div class="project-thumbnail">
-                    <img src="images/f.jpg" alt="Chakra - Business Plan">
-                    <a href="https://link-to-your-project6.com" class="play-button">
-                        <i class="fa-solid fa-play"></i>
-                    </a>
-                </div>
-                <div class="project-info">
-                    <h3>Chakra - Business Plan</h3>
-                    <p>Developed the Chakra app for local language-based truck-sharing. This platform helps small-scale farm owners, empowering small businesses and fostering sustainable development in local communities.</p>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-thumbnail">
-                    <img src="images/f.jpg" alt="New HTML Project">
-                    <a href="greetings/index.html" class="play-button"> <!-- Updated link to new-project.html -->
-                        <i class="fa fa-play"></i>
-                    </a>
-                </div>
-                <div class="project-info">
-                    <h3>New HTML Project</h3>
-                    <p>This is a new project created with HTML, CSS, and JavaScript. Click the play button to explore the project.</p>
-                </div>
-            </div>
+<div class="fun-skills-container", id="lol">
+    <section id="projects">
+        <h1 class="skills-title">
+            <span class=skills-title>🚀</span> My Projects
+          </h1><br><br>
+      <div class="project-list">
+  
+        <!-- Project Card -->
+        <div class="project-card icon-only">
+          <div class="project-icon">
+            <i class="fa-solid fa-globe"></i>
+          </div>
+          <div class="project-info">
+            <h3>Portfolio Website</h3>
+            <p>A clean portfolio site showcasing my skills using HTML, CSS & JS.</p>
+            <a href="https://link-to-your-project1.com" class="play-button">
+              <i class="fa-solid fa-arrow-right"></i> Visit
+            </a>
+          </div>
         </div>
-    </div>
-</div>
-
-            <div class="container">
-                <div id="resume">
-                    <h2 class="section-title">My professional Journey</h2>
-                    <br><br><br><br>
-                    <div class="experience">
-                        <div class="experience-header">
-                            <h3 class="job-title">Software Development Engineer I</h3>
-                            <span class="company">Surya Financial Technology Pvt Ltd</span>
-                        </div>
-                        <span class="date">June 2024 – Present</span>
-                        <ul class="experience-list">
-                            <li>Built a chatbot platform leveraging vector databases, RAG, and LLMs for financial data querying without needing SQL expertise.</li>
-                            <li>Developed a FastAPI-based unified API system, reducing response latency to under 2 seconds for 12+ financial products.</li>
-                            <li>Integrated role-based access control and authentication modules for secure API endpoints.</li>
-                            <li>Designed and implemented a natural language to SQL translator using LLaMA and LangChain for real-time database querying across PostgreSQL, Oracle, and MSSQL.</li>
-                            <li>Enhanced the internal data retrieval pipeline, improving reporting accuracy and automation for behavioral analysis.</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="experience">
-                        <div class="experience-header">
-                            <h3 class="job-title">Software Engineering Intern</h3>
-                            <span class="company">Surya Financial Technology Pvt Ltd</span>
-                        </div>
-                        <span class="date">Feb 2024 – June 2024</span>
-                        <ul class="experience-list">
-                            <li>Automated the RFP document generation using NLP and ML models, reducing manual effort by 90%.</li>
-                            <li>Implemented a natural language query interface using Vanna AI to streamline server-side query handling.</li>
-                            <li>Developed classification models and summarization pipelines for analyzing product documentation and business rules.</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="experience">
-                        <div class="experience-header">
-                            <h3 class="job-title">Software Intern</h3>
-                            <span class="company">Janaagraha (NGO)</span>
-                        </div>
-                        <span class="date">Sep 2023 – Oct 2023</span>
-                        <ul class="experience-list">
-                            <li>Contributed to the design of administrative modules for the "OneOffice Nexus" platform, improving document approval workflows.</li>
-                            <li>Reduced average approval times by 30% by optimizing routing logic and UI components.</li>
-                        </ul>
-                    </div>
-            
-                </div>
-            </div>
-            
-            
-    
-  <!-- servives-->
+  
+        <!-- Project Card -->
+        <div class="project-card icon-only">
+          <div class="project-icon">
+            <i class="fa-solid fa-train"></i>
+          </div>
+          <div class="project-info">
+            <h3>Railway Reservation System</h3>
+            <p>Java & MySQL-powered booking system to simplify ticket reservations.</p>
+            <a href="https://github.com/Dishaibrahim/railway-reservation.git" class="play-button">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+  
+        <!-- Repeat similarly for other projects... -->
+  
+        <div class="project-card icon-only">
+          <div class="project-icon">
+            <i class="fa-solid fa-cloud-rain"></i>
+          </div>
+          <div class="project-info">
+            <h3>Rainfall Prediction App</h3>
+            <p>Used CNN on cloud images for predicting rainfall. Flask + JS deployed.</p>
+            <a href="https://github.com/Dishaibrahim/Cloud-classification-.git" class="play-button">
+              <i class="fa-brands fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+  
+        <!-- Add the rest the same way -->
+        
+      </div>
+    </section>
+  </div>
+  
   <div class="container">
-    <h1 class="sub"> More about me</h1>
+    <div id="resume">
+      <h2 class="skills-title">My Professional Journey</h2>
+      <div class="timeline">
+        
+        <!-- Professional Experience Timeline -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3 class="company">Surya Financial Technology Pvt Ltd</h3>
+            <p class="role">Software Development Engineer I</p>
+            <span class="date">June 2024 – Present</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3 class="company">Surya Financial Technology Pvt Ltd</h3>
+            <p class="role">Software Engineering Intern</p>
+            <span class="date">Feb 2024 – June 2024</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3 class="company">Janaagraha (NGO)</h3>
+            <p class="role">Software Intern</p>
+            <span class="date">Sep 2023 – Oct 2023</span>
+          </div>
+        </div>
+  
+        <!-- Education Timeline -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3 class="company">COLLEGE</h3>
+            <p class="role">NITTE Meenakshi Institute of Technology</p>
+            <span class="date">CGPA: 8.43</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3 class="company">12TH BOARDS</h3>
+            <p class="role">Boscoss Pre-University College</p>
+            <span class="date">94.5% (PCMB)</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3 class="company">10TH BOARDS</h3>
+            <p class="role">Manipal School</p>
+            <span class="date">93.6%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+            
+    <!-- Services -->
+<div class="container",id="ach">
+    <h1 class="skills-title">More about me</h1>
     <div class="serviceslist">
-        <div>
-            <i class="fa-solid fa-scroll"></i>
-            <h2>Certifications</h2>
-            <p>
-                
-                Text Retrieval and Search Engines, Illinois <br> <br>
-                Text Mining and Analytics, Illinois <br> <br>NPTEL Entrepreneurship essentials <br><br>
-
-NPTEL  Getting Started with Competitive Programming <br><br>
-Python for Data Structures, Algorithms, and Interviews!-udemy 
-
-            </p>
-            <!--<a href="#">learn more</a>-->
-        </div>
-        <div>
-            <i class="fa-solid fa-trophy"></i>
-            <h2> Achievements</h2>
-            <p>
-                Runners up at ideathon3.0 at enigma </p>
-                <p>
-                    <br>KIRAN-scholar under Persistent foundation
-            </p>
-            
-        </div>
-        <div>
-            <i class="fa-solid fa-book"></i>
-            <h2>Languages</h2>
-            <p>
-                English  <br><br>Hindi <br><br>Kannada <br><br>Beary
-
-            </p>
-            
-        </div>
+      <div>
+        <i class="fa-solid fa-scroll"></i>
+        <h2>Certifications</h2>
+        <p>
+          Text Retrieval and Search Engines, Illinois<br><br>
+          Text Mining and Analytics, Illinois<br><br>
+          NPTEL Entrepreneurship Essentials<br><br>
+          NPTEL Getting Started with Competitive Programming<br><br>
+          Python for Data Structures, Algorithms, and Interviews! - Udemy
+        </p>
+        <!--<a href="#">Learn more</a>-->
+      </div>
+      <div>
+        <i class="fa-solid fa-trophy"></i>
+        <h2>Achievements</h2>
+        <p>
+          Runners-up at Ideathon 3.0 at Enigma
+        </p>
+        <p>
+          KIRAN-Scholar under Persistent Foundation
+        </p>
+      </div>
+      <div>
+        <i class="fa-solid fa-book"></i>
+        <h2>Languages</h2>
+        <p>
+          English<br><br>
+          Hindi<br><br>
+          Kannada<br><br>
+          Beary
+        </p>
+      </div>
     </div>
-</div>
-
-    <!-- contact-->
-    <div class="container">
-    <div id="contact">
-        <div class="contaniner">
-            <div class="row">
-                <div class="contactleft">
-                    <h1 class="sub">Contact me</h1>
-                    <p><i class="fa-solid fa-envelope"></i>dishaibrahimsr@gmail.com</p>
-                    <p><i class="fa-solid fa-phone"></i>7975814261</p>
-                    
-                    <div class="social">
-                        
-                        <a href="https://github.com/Dishaibrahim"><i class="fa-brands fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/disha-ibrahim-926801226/"><i class="fa-brands fa-linkedin"></i></a>
-                    </div>
-                    <a href="" download class=" btn btn2">Download Resume</a>
-
-
-                </div>
-                <div class="contactright">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="your name" required>
-                        <input type="text" name="Email" placeholder="your email" required>
-                        <textarea name="Message"  rows="6" placeholder="your message" required></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
-                    </form>
-                    <span id="msg"></span>
-
-                </div>
-            </div>
-
-
+  </div>
+  
+  <!-- Contact -->
+<div class="container" id="b">
+    <div class="row">
+      <div class="contactleft">
+        <h1 class="sub">Contact me</h1>
+        <p><i class="fa-solid fa-envelope"></i> dishaibrahimsr@gmail.com</p>
+        <p><i class="fa-solid fa-phone"></i> 7975814261</p>
+        
+        <div class="social">
+          <a href="https://github.com/Dishaibrahim"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/disha-ibrahim-926801226/"><i class="fa-brands fa-linkedin"></i></a>
         </div>
+        <a href="" download class="btn btn2">Download Resume</a>
+      </div>
+      <div class="contactright">
+        <!-- Removed the form section -->
+      </div>
     </div>
-
-
+  </div>
+  
+  
         <div class="copy">
             <p> disha © made with <i class="fa-regular fa-heart"></i></p>
         </div>
@@ -403,6 +338,19 @@ function opentab(tabname) {
             .catch(error => console.error('Error!', error.message))
         })
       </script>
-      
+      <script>
+        function openTab(tabId, el) {
+            const contents = document.querySelectorAll('.tabcontent');
+            const tabs = document.querySelectorAll('.tlinks');
+        
+            contents.forEach(content => content.classList.remove('active'));
+            tabs.forEach(tab => tab.classList.remove('active'));
+        
+            document.getElementById(tabId).classList.add('active');
+            el.classList.add('active');
+        }
+        </script>
+        <script src="dino.js"></script>
+        
 </body>
 </html>
